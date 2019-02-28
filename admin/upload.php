@@ -17,8 +17,9 @@ include('../do.php');
 	$uploaddir='pictures/';
 	$uploadfile=$uploaddir.basename($filename);
 	if(move_uploaded_file($filetmp, $uploadfile) && move_uploaded_file($filetmp1, $uploadfile1)){
-		$q1="INSERT INTO `booklist` (`book`, `auth`, `path`, `des`,`bpath`) VALUES ('$bname', '$auth', '$uploadfile', '$desc','$uploadfile1')";
+		$q1="INSERT INTO `booklist` (`book`, `auth`, `path`, `des`,`bpath`,`download`) VALUES ('$bname', '$auth', '$uploadfile', '$desc','$uploadfile1','0')";
 		$res=mysqli_query($db,$q1);
+		echo mysqli_error($db);
 		if($res){
 			echo '<script>alert("book added succesfully");location.href="index.php";</script>';
 		}
