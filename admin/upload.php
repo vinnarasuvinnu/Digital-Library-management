@@ -23,6 +23,7 @@ include('../do.php');
 		if($res){
 			echo '<script>alert("book added succesfully");location.href="index.php";</script>';
 		}
+
 		else{
 						echo '<script>alert("book has not added ");location.href="index.php";</script>';
 

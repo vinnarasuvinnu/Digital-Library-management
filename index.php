@@ -81,14 +81,7 @@ if(!isset($_SESSION['uname'])){
 				
 					<!-- /ASIDE -->
 
-					<!-- STORE -->
-					<div id="store" class="col-md-6">
-						<!-- store top filter -->
-					
-						<!-- /store top filter -->
-
-						<!-- store products -->
-						<div class="row">
+			
 							<!-- product -->
 
 
@@ -100,7 +93,7 @@ if(!isset($_SESSION['uname'])){
 							while($row=mysqli_fetch_array($res)){
 
 								?>
-							<div class="col-lg-6 col-xs-8 col-sm-6">
+							<div class="col-lg-3 col-xs-3 col-sm-3">
 								<div class="product">
 									<div class="product-img" style="height: 100px;overflow: hidden;" >
 										<img src="admin/<?php echo $row['path'];?>" >
@@ -157,10 +150,7 @@ if(!isset($_SESSION['uname'])){
 						<!-- /store products -->
 
 						
-						<!-- /store bottom filter -->
-					</div>
-					<!-- /STORE -->
-				</div>
+				
 				<!-- /row -->
 			</div>
 			<!-- /container -->
