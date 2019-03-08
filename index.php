@@ -93,7 +93,7 @@ if(!isset($_SESSION['uname'])){
 							while($row=mysqli_fetch_array($res)){
 
 								?>
-							<div class="col-lg-3 col-xs-3 col-sm-3">
+							<div class="col-lg-4 col-md-4 col-sm-4">
 								<div class="product">
 									<div class="product-img" style="height: 100px;overflow: hidden;" >
 										<img src="admin/<?php echo $row['path'];?>" >
