@@ -60,7 +60,7 @@ if(!isset($_SESSION['uname'])){
     </div>
     <ul class="nav navbar-nav" style="float: right;">
     	<li><a href="logout.php">Logout</a></li>
-      <li><a href="load.php" style="color: white" class="btn btn-primary" >download page</a></li>
+      <li><a href="load.php" style="color: black" class="btn btn-primary" >download page</a></li>
       
     </ul>
   </div>
@@ -75,6 +75,29 @@ if(!isset($_SESSION['uname'])){
 		<div class="section">
 			<!-- container -->
 			<div class="container">
+
+
+
+      <div class="row">
+        <div class="text-center">
+          <div class="well">
+            <?php 
+           include('do.php');
+
+            
+              $q1="select * from booklist";
+              $res=mysqli_query($db,$q1);
+              $count=0;
+              while($row=mysqli_fetch_array($res)){
+              	$count++;
+              }
+            
+
+            ?>
+            <h4>Total number of books are &nbsp;&nbsp;:&nbsp;&nbsp;<?php echo $count ?></h4>
+          </div>
+        </div>
+      </div>
 				<!-- row -->
 				<div class="row">
 					<!-- ASIDE -->
@@ -87,7 +110,6 @@ if(!isset($_SESSION['uname'])){
 
 							<?php
 
-							include('do.php');
 							$q1="select * from booklist";
 							$res=mysqli_query($db,$q1);
 							while($row=mysqli_fetch_array($res)){

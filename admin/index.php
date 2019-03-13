@@ -16,8 +16,7 @@ if(!isset($_SESSION['aname'])){
     <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
 
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- styles -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">    <!-- styles -->
     <link href="css/styles.css" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.jqueryui.min.css">
@@ -49,6 +48,29 @@ setTimeout(function(){ location.reload(); }, 3000);
       $(document).ready(function(){
             var table=$('#example').DataTable();
 
+
+             $('#example tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+ 
+    // DataTable
+
+ 
+    // Apply the search
+    table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search("^" + $(this).val() + "$", true, false, true)
+                    .draw();
+            }
+        } );
+    } );
+
+
           $.ajax({
         url:"alltoo.php",
         method:"post",
@@ -69,8 +91,8 @@ setTimeout(function(){ location.reload(); }, 3000);
         '<td>'+value.aname+'</td>' +
     '<td><a href="read.php?file='+value.bpath+'"><img src="'+value.path+'" height="50" width="50"></a></td>' +
     '<td>'+value.des+'</td>' +
- '<td id='+value.id+' onclick="call(this.id)"><a href="down.php?file='+value.bpath+'&id='+value.id+'">Download</a></td>' +
-             '<td>'+value.download+'</td>' +
+ '<td id='+value.id+' onclick="call(this.id)"><a href="admin/down.php?file='+value.bpath+'&id='+value.id+'">Download</a>||<a href="read.php?file='+value.bpath+'">View pdf</a></td>' +
+        '<td>'+value.download+'</td>' +
 
 
 
@@ -130,6 +152,7 @@ setTimeout(function(){ location.reload(); }, 3000);
 	</div>
 
     <div class="page-content">
+
     	<div class="row">
 		 <div class="col-lg-2">
      </div>
@@ -175,7 +198,7 @@ setTimeout(function(){ location.reload(); }, 3000);
   				<div class="panel-heading">
 					<div class="panel-title">Books list</div>
 				</div>
-  				<div class="panel-body">
+  				<div class="panel-body table-responsive" >
   					<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example" style="color: blue">
 						<thead>
 							<tr>
@@ -191,6 +214,19 @@ setTimeout(function(){ location.reload(); }, 3000);
 						<tbody>
 						
 							</tbody>
+              <tfoot>
+                <tr>
+                <th>Bookname</th>
+                <th>Author name</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>Book to download</th>
+                <th>Total downloads</th>
+                
+              </tr>
+                
+
+              </tfoot>
 					</table>
   				</div>
   			</div>

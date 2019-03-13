@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 27, 2019 at 10:17 PM
+-- Generation Time: Mar 13, 2019 at 10:55 PM
 -- Server version: 5.7.25-0ubuntu0.18.04.2
 -- PHP Version: 7.2.15-0ubuntu0.18.04.1
 
@@ -42,7 +42,16 @@ CREATE TABLE `booklist` (
 
 INSERT INTO `booklist` (`bid`, `book`, `auth`, `path`, `des`, `bpath`, `download`) VALUES
 (5, 'myfile', 'your name', 'pictures/Hydrangeas.jpg', 'super file', 'pictures/1747128.odt', 4),
-(6, 'gggg', 'dsfads', 'pictures/Lighthouse.jpg', 'dfgsfgd', 'pictures/EPFO_ Home.pdf', 6);
+(6, 'gggg', 'dsfads', 'pictures/Lighthouse.jpg', 'dfgsfgd', 'pictures/EPFO_ Home.pdf', 6),
+(7, 'llllllllllll', 'lllllllllllll', 'pictures/5.jpg', 'lkkkkkkkkkkkkkkk', 'pictures/1747128 (4).odt', 1),
+(8, 'tmail book of the year', 'This is the name of the book which is writeen by the author name of the new place and new ', 'pictures/5.jpg', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/1747128.odt', 0),
+(9, 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/5.jpg', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/1747128.odt', 1),
+(10, 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/Screenshot from 2019-03-05 22-02-18.png', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/1747128.odt', 1),
+(11, 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/Screenshot from 2019-03-05 22-02-18.png', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/1747128.odt', 0),
+(12, 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/5.jpg', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/1747128.odt', 0),
+(13, 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/5.jpg', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/1747128.odt', 0),
+(14, 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/5.jpg', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/1747128.odt', 0),
+(15, 'tmail book of the year', 'lllllllllllll', 'pictures/cool.jpeg', 'A paragraph (from the Ancient Greek Ï€Î±ÏÎ¬Î³ÏÎ±Ï†Î¿Ï‚ paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.', 'pictures/1747128.odt', 0);
 
 -- --------------------------------------------------------
 
@@ -113,7 +122,7 @@ ALTER TABLE `userinfo`
 -- AUTO_INCREMENT for table `booklist`
 --
 ALTER TABLE `booklist`
-  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `register`
 --

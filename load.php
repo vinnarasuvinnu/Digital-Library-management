@@ -64,7 +64,43 @@ setTimeout(function(){ location.reload(); }, 3000);
     		// body...
     	}
       $(document).ready(function(){
+
+
+
+
+
+
+
+
+
             var table=$('#example').DataTable();
+
+
+
+ $('#example tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+ 
+    // DataTable
+
+ 
+    // Apply the search
+    table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search("^" + $(this).val() + "$", true, false, true)
+                    .draw();
+            }
+        } );
+    } );
+
+
+
+
 
          
           $.ajax({
@@ -87,7 +123,7 @@ setTimeout(function(){ location.reload(); }, 3000);
         '<td>'+value.aname+'</td>' +
     '<td><a href="admin/read.php?file='+value.bpath+'"><img src="admin/'+value.path+'" height="50" width="50"></a></td>' +
     '<td>'+value.des+'</td>' +
-    '<td id='+value.id+' onclick="call(this.id)"><a href="admin/down.php?file='+value.bpath+'&id='+value.id+'">Download</a></td>' +
+    '<td id='+value.id+' onclick="call(this.id)"><a href="admin/down.php?file='+value.bpath+'&id='+value.id+'">Download</a>||<a href="admin/read.php?file='+value.bpath+'">View pdf</a></td>' +
         '<td>'+value.download+'</td>' +
 
 
@@ -107,6 +143,23 @@ setTimeout(function(){ location.reload(); }, 3000);
 
         }
     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       })
     </script>
 		<style type="text/css">
@@ -125,7 +178,7 @@ setTimeout(function(){ location.reload(); }, 3000);
       <a class="navbar-brand" href="index.php">Digital Library</a>
     </div>
     <ul class="nav navbar-nav" style="float: right;">
-      <li><a href="" style="color: white" class="btn btn-primary" >download page</a></li>
+      <li><a href="" style="color: black" class="btn btn-primary" >download page</a></li>
       
     </ul>
   </div>
@@ -153,12 +206,12 @@ setTimeout(function(){ location.reload(); }, 3000);
 						<!-- /store top filter -->
 
 						<!-- store products -->
-						<div class="row">
+						<div class="row table-responsive">
 							<!-- product -->
 
 
 					
-  					<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example" style="color: blue">
+  					<table  class="table table-striped table-bordered" id="example" style="color: blue" >
 						<thead>
 							<tr>
 								<th>Bookname</th>
@@ -170,9 +223,25 @@ setTimeout(function(){ location.reload(); }, 3000);
 								
 							</tr>
 						</thead>
+
+
 						<tbody>
 						
 							</tbody>
+
+							<tfoot>
+								<tr>
+								<th>Bookname</th>
+								<th>Author name</th>
+								<th>Image</th>
+                <th>Description</th>
+                <th>Book to download</th>
+                <th>Total downloads</th>
+								
+							</tr>
+								
+
+							</tfoot>
 					</table>
   			
 
